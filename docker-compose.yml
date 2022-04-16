@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  clojure:
+    hostname: clojure
+    build:
+      context: .
+      dockerfile: ./deployment/local/main.Dockerfile
+    restart: "no"
+    volumes:
+      - ./source:/source:cached
